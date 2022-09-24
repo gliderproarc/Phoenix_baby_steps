@@ -8,8 +8,6 @@ defmodule BabySteps.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      BabySteps.Repo,
       # Start the Telemetry supervisor
       BabyStepsWeb.Telemetry,
       # Start the PubSub system

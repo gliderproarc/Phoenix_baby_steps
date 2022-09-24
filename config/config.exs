@@ -7,15 +7,12 @@
 # General application configuration
 import Config
 
-config :baby_steps,
-  ecto_repos: [BabySteps.Repo]
-
 # Configures the endpoint
 config :baby_steps, BabyStepsWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: BabyStepsWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: BabySteps.PubSub,
-  live_view: [signing_salt: "VSQwCD2r"]
+  live_view: [signing_salt: "UIxZoPeL"]
 
 # Configures the mailer
 #

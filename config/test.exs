@@ -1,27 +1,15 @@
 import Config
 
-# Configure your database
-#
-# The MIX_TEST_PARTITION environment variable can be used
-# to provide built-in test partitioning in CI environment.
-# Run `mix help test` for more information.
-config :baby_steps, BabySteps.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "baby_steps_test#{System.get_env("MIX_TEST_PARTITION")}",
-  pool: Ecto.Adapters.SQL.Sandbox,
-  pool_size: 10
-
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :baby_steps, BabyStepsWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "Spf8GNkP8E5mYdTy0Bjc4SdQ2LFRXvFEs62vO73QATPxV65cGf4g+fyR+zBFtFLc",
+  secret_key_base: "QVzS+mIJlxftfBR3bUK4s/FKDqMkH/onFuTyCO1qsF7okfxOBS3lVDzjvN9XWi3n",
   server: false
 
 # In test we don't send emails.
-config :baby_steps, BabySteps.Mailer, adapter: Swoosh.Adapters.Test
+config :baby_steps, BabySteps.Mailer,
+  adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn

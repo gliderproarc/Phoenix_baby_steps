@@ -7,7 +7,7 @@ defmodule BabyStepsWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_baby_steps_key",
-    signing_salt: "F+JxrALu"
+    signing_salt: "GeDPU1YV"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
@@ -28,7 +28,6 @@ defmodule BabyStepsWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :baby_steps
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

@@ -1,15 +1,5 @@
 import Config
 
-# Configure your database
-config :baby_steps, BabySteps.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "baby_steps_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -23,7 +13,7 @@ config :baby_steps, BabyStepsWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "UiD703ZonQNzKURcHvLSCPpQtB9i9KL+u2mS4CTOg4JEojq6K1GXMgbZaXKzRiqB",
+  secret_key_base: "BWxhUpfodArHZf4LO2v1Aj+6Sp2528sRk7N3bMqWOqtCIzwwenhdtbb00H6N7J90",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
